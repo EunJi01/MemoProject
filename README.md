@@ -1,9 +1,9 @@
 # MemoProject
 ### 개발 공수
-| 회차 | 내용 | 세부내용 | 예상시간 | 특이사항 | 날짜 |
+| 회차 | 내용 | 세부내용 | 예상시간 | 실제시간 | 날짜 |
 | --- | --- | --- | --- | --- | --- |
 | **Iteration 1** | 기본 구성 |  |  |  | **~2022.08.31** |
-|  | ColorSet | 다크모드 대응 ColorSet 구성 | 1h |  |  |
+|  | ColorSet | 다크모드 대응 ColorSet 구성 | 1h | 2h |  |
 |  | MomoListView | Code Base 레이아웃 | 1h |  |  |
 |  | FirstPopupView | Code Base 레이아웃 | 1h |  |  |
 |  | FirstPopupView | 최초 실행 구현 | 1h |  |  |
