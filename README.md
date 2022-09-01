@@ -25,7 +25,7 @@
 |  | MomoListView | 스와이프 삭제 구현 | 1h |  |  |
 |  | MomoListView | tableView 헤더 구현 | 2h |  |  |
 |  | MomoListView | 메모 고정 기능 | 4h |  |  |
-|  | MomoListView | 검색결과 텍스트컬러 변경 | 2h | 2h |  |
+|  | MomoListView | 검색결과 텍스트컬러 변경 | 2h |  |  |
 |  |  |  |  |  |  |
 | **Iteration 5** | WriteView 디테일 기능 |  |  |  | **~2022.09.04** |
 |  | WriteView | 공유 버튼 구현 | 1h |  |  |
