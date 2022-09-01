@@ -20,17 +20,18 @@
 |  | Realm | Realm 수정 구현 | 1h |  |  |
 |  | Realm | Realm 로드(정렬) 구현 | 1h |  |  |
 |  | Realm | Realm 삭제 구현 | 2h |  |  |
-|  | MomoListView | 스와이프 삭제 구현 | 1h |  |  |
 |  |  |  |  |  |  |
-| **Iteration 4** | 자잘한 기능 |  |  |  | **~2022.09.03** |
+| **Iteration 4** | MomoListView 디테일 기능 |  |  |  | **~2022.09.03** |
+|  | MomoListView | 스와이프 삭제 구현 | 1h |  |  |
 |  | MomoListView | tableView 헤더 구현 | 2h |  |  |
 |  | MomoListView | 메모 고정 기능 | 4h |  |  |
+|  | MomoListView | 검색결과 텍스트컬러 변경 | 2h | 2h |  |
+|  |  |  |  |  |  |
+| **Iteration 5** | WriteView 디테일 기능 |  |  |  | **~2022.09.04** |
+|  | WriteView | 공유 버튼 구현 | 1h |  |  |
+|  | WriteView | 키보드 띄우기 | ~~1h~~ | 30m |  |
 |  | WriteView | 날짜 포멧 | 2h |  |  |
 |  | WriteView | 리턴키로 제목 구분 | 3h |  |  |
 |  |  |  |  |  |  |
-| **Iteration 5** | 자잘한 기능 |  |  |  | **~2022.09.04** |
-|  | WriteView | 공유 버튼 구현 | 1h |  |  |
-|  | WriteView | 키보드 띄우기 | 1h |  |  |
-|  |  |  |  |  |  |
-| **Iteration 6** | 버그 해결 |  |  |  | **~2022.09.05** |
+| **Iteration 6** | 버그/구현 못한 기능 |  |  |  | **~2022.09.05** |
 |  |  |  |  |  |  |
