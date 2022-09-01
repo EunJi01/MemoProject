@@ -43,6 +43,7 @@ class FirstPopupView: BaseView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = ColorSet.shared.popupBackgroundColor
     }
     
     required init?(coder: NSCoder) {

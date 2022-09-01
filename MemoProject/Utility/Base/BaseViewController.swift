@@ -8,17 +8,23 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        
         configure()
         setConstraints()
         tapGesture()
+        navigationItemColor()
     }
     
-    func tapGesture() {
+    private func navigationItemColor() {
+        let navigation = UINavigationBarAppearance()
+        navigation.backgroundColor = .tertiarySystemFill
+        navigationController?.navigationBar.scrollEdgeAppearance = navigation
+        navigationController?.navigationBar.tintColor = ColorSet.shared.buttonColor
+        navigationController?.toolbar.tintColor = ColorSet.shared.buttonColor
+    }
+    
+    private func tapGesture() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
         tapGestureRecognizer.cancelsTouchesInView = false // 중요!
         view.addGestureRecognizer(tapGestureRecognizer)

@@ -23,6 +23,9 @@
 		B65F77C028BF8B6C006D41B7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B65F77BF28BF8B6C006D41B7 /* SnapKit */; };
 		B65F77C228BF9796006D41B7 /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F77C128BF9796006D41B7 /* ColorSet.swift */; };
 		B65F77C828BFAB06006D41B7 /* FirstPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F77C728BFAB06006D41B7 /* FirstPopupView.swift */; };
+		B65F77CD28BFC71C006D41B7 /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F77CC28BFC71C006D41B7 /* MemoListTableViewCell.swift */; };
+		B65F77D328BFEE20006D41B7 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F77D228BFEE20006D41B7 /* WriteView.swift */; };
+		B65F77D528BFEE29006D41B7 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F77D428BFEE29006D41B7 /* WriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		B65F77BB28BF8A08006D41B7 /* FirstPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPopupViewController.swift; sourceTree = "<group>"; };
 		B65F77C128BF9796006D41B7 /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
 		B65F77C728BFAB06006D41B7 /* FirstPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPopupView.swift; sourceTree = "<group>"; };
+		B65F77CC28BFC71C006D41B7 /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
+		B65F77D228BFEE20006D41B7 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		B65F77D428BFEE29006D41B7 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B63C13DD28C111520035C1DE /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		B65F778A28BF7430006D41B7 = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +92,10 @@
 				B65F77B828BF8781006D41B7 /* Protocol */,
 				B65F77B528BF85B3006D41B7 /* Extension */,
 				B65F77CB28BFBB96006D41B7 /* Utility */,
+				B63C13DD28C111520035C1DE /* Realm */,
 				B65F77AF28BF8463006D41B7 /* MemoList */,
 				B65F77C928BFAB61006D41B7 /* FirstPopup */,
+				B65F77D128BFEDFF006D41B7 /* Write */,
 				B65F779628BF7430006D41B7 /* AppDelegate.swift */,
 				B65F779828BF7430006D41B7 /* SceneDelegate.swift */,
 				B65F779A28BF7430006D41B7 /* ViewController.swift */,
@@ -106,6 +121,7 @@
 			children = (
 				B65F77AB28BF844E006D41B7 /* MemoListView.swift */,
 				B65F77AD28BF845B006D41B7 /* MemoListViewController.swift */,
+				B65F77CC28BFC71C006D41B7 /* MemoListTableViewCell.swift */,
 			);
 			path = MemoList;
 			sourceTree = "<group>";
@@ -142,6 +158,15 @@
 				B65F77C128BF9796006D41B7 /* ColorSet.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		B65F77D128BFEDFF006D41B7 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				B65F77D228BFEE20006D41B7 /* WriteView.swift */,
+				B65F77D428BFEE29006D41B7 /* WriteViewController.swift */,
+			);
+			path = Write;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,15 +249,18 @@
 				B65F77B728BF85C6006D41B7 /* UIViewController+Extension.swift in Sources */,
 				B65F77BA28BF87C9006D41B7 /* ReusableIdentifier.swift in Sources */,
 				B65F779B28BF7430006D41B7 /* ViewController.swift in Sources */,
+				B65F77D528BFEE29006D41B7 /* WriteViewController.swift in Sources */,
 				B65F77C228BF9796006D41B7 /* ColorSet.swift in Sources */,
 				B65F77AE28BF845B006D41B7 /* MemoListViewController.swift in Sources */,
 				B65F779728BF7430006D41B7 /* AppDelegate.swift in Sources */,
+				B65F77D328BFEE20006D41B7 /* WriteView.swift in Sources */,
 				B65F77B128BF84E0006D41B7 /* BaseView.swift in Sources */,
 				B65F77BC28BF8A08006D41B7 /* FirstPopupViewController.swift in Sources */,
 				B65F77AC28BF844E006D41B7 /* MemoListView.swift in Sources */,
 				B65F77B328BF84E8006D41B7 /* BaseViewController.swift in Sources */,
 				B65F779928BF7430006D41B7 /* SceneDelegate.swift in Sources */,
 				B65F77C828BFAB06006D41B7 /* FirstPopupView.swift in Sources */,
+				B65F77CD28BFC71C006D41B7 /* MemoListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

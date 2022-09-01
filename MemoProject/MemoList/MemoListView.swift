@@ -10,19 +10,15 @@ import SnapKit
 
 class MemoListView: BaseView {
     let tableView: UITableView = {
-        let view = UITableView()
-        view.backgroundColor = .gray
-        return view
-    }()
-    
-    let toolbar: UIToolbar = {
-        let view = UIToolbar()
-        view.backgroundColor = .clear
+        let view = UITableView(frame: .zero, style: .insetGrouped)
+        view.backgroundColor = ColorSet.shared.backgroundColor
+        view.register(MemoListTableViewCell.self, forCellReuseIdentifier: MemoListTableViewCell.reuseIdentifier)
         return view
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = ColorSet.shared.backgroundColor
     }
     
     required init?(coder: NSCoder) {
@@ -30,20 +26,15 @@ class MemoListView: BaseView {
     }
     
     override func configure() {
-        [tableView, toolbar].forEach {
+        [tableView].forEach {
             addSubview($0)
         }
     }
     
     override func setConstraints() {
         tableView.snp.makeConstraints { make in
-            make.top.leading.trailing.equalTo(safeAreaLayoutGuide)
-            make.bottom.equalTo(toolbar.snp.top)
-            
-        }
-        
-        toolbar.snp.makeConstraints { make in
-            make.leading.trailing.bottom.equalTo(safeAreaLayoutGuide)
+            make.top.bottom.equalTo(safeAreaLayoutGuide)
+            make.leading.trailing.equalTo(safeAreaLayoutGuide).inset(4)
         }
     }
 }

@@ -12,9 +12,10 @@ class ColorSet {
     private init() {}
     
     let popupBackgroundColor: UIColor = UIColor(named: "popupBackgroundColor") ?? .blue
-    let buttonColor: UIColor = .orange
+    let buttonColor: UIColor = .systemOrange
     lazy var backgroundColor: UIColor = darkMode(lightColor: .systemGray5, darkColor: .black)
     lazy var viewObjectColor: UIColor = darkMode(lightColor: .white, darkColor: .darkGray)
+    lazy var blackAndWhite: UIColor = darkMode(lightColor: .white, darkColor: .black)
     
     private func darkMode(lightColor: UIColor, darkColor: UIColor) -> UIColor {
         if #available(iOS 13, *) {

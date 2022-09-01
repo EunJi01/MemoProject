@@ -16,7 +16,6 @@ final class FirstPopupViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainView.backgroundColor = ColorSet.shared.popupBackgroundColor // 왠지 BaseView랑 FirstPopupView에서 변경이 안됨ㅠㅠ
     }
     
     override func configure() {
