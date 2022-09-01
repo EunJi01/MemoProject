@@ -22,7 +22,7 @@
 |  | MomoListView | 스와이프 삭제 구현 | 1h |  |  |
 |  |  |  |  |  |  |
 | **Iteration 4** | 자잘한 기능 |  |  |  | **~2022.09.03** |
-|  | MomoListView | 메모 고정 기능 | 2h |  |  |
+|  | MomoListView | 메모 고정 기능 | 4h |  |  |
 |  | MomoListView | 메모 검색 기능 | 2h |  |  |
 |  | MomoListView | 메모 수정 기능 | 1h |  |  |
 |  | WriteView | 리턴키로 제목 구분 | 3h |  |  |
