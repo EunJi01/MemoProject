@@ -17,7 +17,7 @@
 | **Iteration 3** | Realm |  |  |  | **~2022.09.02** |
 |  | Realm | Realm 스키마 구성 | 1h | 1h |  |
 |  | Realm | Realm 저장 구현 | 2h | 2h |  |
-|  | Realm | Realm 수정 구현 | ~~1h~~ | ... |  |
+|  | Realm | Realm 수정 구현 | ~~1h~~ | 4h... |  |
 |  | Realm | Realm 로드(정렬) 구현 | 1h | 1h |  |
 |  | Realm | Realm 삭제 구현 | ~~2h~~ | ... |  |
 |  |  |  |  |  |  |
