@@ -12,7 +12,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         configure()
         setConstraints()
-        tapGesture()
+        //tapGesture()
         navigationItemColor()
     }
     
