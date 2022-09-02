@@ -15,11 +15,11 @@
 |  | WriteView | Code Base 레이아웃 | ~~1h~~ | 30m |  |
 |  |  |  |  |  |  |
 | **Iteration 3** | Realm |  |  |  | **~2022.09.02** |
-|  | Realm | Realm 스키마 구성 | 1h |  |  |
-|  | Realm | Realm 저장 구현 | 2h |  |  |
-|  | Realm | Realm 수정 구현 | 1h |  |  |
-|  | Realm | Realm 로드(정렬) 구현 | 1h |  |  |
-|  | Realm | Realm 삭제 구현 | 2h |  |  |
+|  | Realm | Realm 스키마 구성 | 1h | 1h |  |
+|  | Realm | Realm 저장 구현 | 2h | 2h |  |
+|  | Realm | Realm 수정 구현 | ~~1h~~ | ... |  |
+|  | Realm | Realm 로드(정렬) 구현 | 1h | 1h |  |
+|  | Realm | Realm 삭제 구현 | ~~2h~~ | ... |  |
 |  |  |  |  |  |  |
 | **Iteration 4** | MomoListView 디테일 기능 |  |  |  | **~2022.09.03** |
 |  | MomoListView | 스와이프 삭제 구현 | 1h |  |  |
