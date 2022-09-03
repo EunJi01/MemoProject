@@ -28,9 +28,9 @@
 |  | MomoListView | 검색결과 텍스트컬러 변경 | 2h |  |  |
 |  |  |  |  |  |  |
 | **Iteration 5** | WriteView 디테일 기능 |  |  |  | **~2022.09.04** |
-|  | WriteView | 공유 버튼 구현 | 1h |  |  |
+|  | WriteView | 공유 버튼 구현 | ~~1h~~ | 30m |  |
 |  | WriteView | 키보드 띄우기 | ~~1h~~ | 30m |  |
-|  | WriteView | 날짜 포멧 | 2h |  |  |
+|  | WriteView | 날짜 포멧 | 2h | 2h |  |
 |  | WriteView | 리턴키로 제목 구분 | 3h |  |  |
 |  |  |  |  |  |  |
 | **Iteration 6** | 버그/구현 못한 기능 |  |  |  | **~2022.09.05** |
