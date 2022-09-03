@@ -11,7 +11,8 @@
 		B63C13E828C21D030035C1DE /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B63C13E728C21D030035C1DE /* Realm */; };
 		B63C13EA28C21D030035C1DE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B63C13E928C21D030035C1DE /* RealmSwift */; };
 		B63C13ED28C220670035C1DE /* UserMemoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C13EC28C220670035C1DE /* UserMemoRepository.swift */; };
-		B63C13F028C22C260035C1DE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C13EF28C22C260035C1DE /* SearchViewController.swift */; };
+		B63C13F228C38E380035C1DE /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C13F128C38E380035C1DE /* Array+Extension.swift */; };
+		B63C13F528C3A7720035C1DE /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = B63C13F428C3A7720035C1DE /* Toast */; };
 		B65F779728BF7430006D41B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F779628BF7430006D41B7 /* AppDelegate.swift */; };
 		B65F779928BF7430006D41B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F779828BF7430006D41B7 /* SceneDelegate.swift */; };
 		B65F779B28BF7430006D41B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F779A28BF7430006D41B7 /* ViewController.swift */; };
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		B63C13DF28C1138E0035C1DE /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		B63C13EC28C220670035C1DE /* UserMemoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMemoRepository.swift; sourceTree = "<group>"; };
-		B63C13EF28C22C260035C1DE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B63C13F128C38E380035C1DE /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		B65F779328BF7430006D41B7 /* MemoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65F779628BF7430006D41B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B65F779828BF7430006D41B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B63C13F528C3A7720035C1DE /* Toast in Frameworks */,
 				B63C13EA28C21D030035C1DE /* RealmSwift in Frameworks */,
 				B63C13E828C21D030035C1DE /* Realm in Frameworks */,
 				B65F77C028BF8B6C006D41B7 /* SnapKit in Frameworks */,
@@ -80,14 +82,6 @@
 				B63C13EC28C220670035C1DE /* UserMemoRepository.swift */,
 			);
 			path = Realm;
-			sourceTree = "<group>";
-		};
-		B63C13EE28C22A220035C1DE /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				B63C13EF28C22C260035C1DE /* SearchViewController.swift */,
-			);
-			path = Search;
 			sourceTree = "<group>";
 		};
 		B65F778A28BF7430006D41B7 = {
@@ -115,7 +109,6 @@
 				B63C13DD28C111520035C1DE /* Realm */,
 				B65F77C928BFAB61006D41B7 /* FirstPopup */,
 				B65F77AF28BF8463006D41B7 /* MemoList */,
-				B63C13EE28C22A220035C1DE /* Search */,
 				B65F77D128BFEDFF006D41B7 /* Write */,
 				B65F779628BF7430006D41B7 /* AppDelegate.swift */,
 				B65F779828BF7430006D41B7 /* SceneDelegate.swift */,
@@ -151,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				B65F77B628BF85C6006D41B7 /* UIViewController+Extension.swift */,
+				B63C13F128C38E380035C1DE /* Array+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -210,6 +204,7 @@
 				B65F77BF28BF8B6C006D41B7 /* SnapKit */,
 				B63C13E728C21D030035C1DE /* Realm */,
 				B63C13E928C21D030035C1DE /* RealmSwift */,
+				B63C13F428C3A7720035C1DE /* Toast */,
 			);
 			productName = MemoProject;
 			productReference = B65F779328BF7430006D41B7 /* MemoProject.app */;
@@ -242,6 +237,7 @@
 			packageReferences = (
 				B65F77BE28BF8B6C006D41B7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				B63C13E628C21D030035C1DE /* XCRemoteSwiftPackageReference "realm-swift" */,
+				B63C13F328C3A7720035C1DE /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = B65F779428BF7430006D41B7 /* Products */;
 			projectDirPath = "";
@@ -281,8 +277,8 @@
 				B65F77B128BF84E0006D41B7 /* BaseView.swift in Sources */,
 				B65F77BC28BF8A08006D41B7 /* FirstPopupViewController.swift in Sources */,
 				B63C13ED28C220670035C1DE /* UserMemoRepository.swift in Sources */,
+				B63C13F228C38E380035C1DE /* Array+Extension.swift in Sources */,
 				B65F77AC28BF844E006D41B7 /* MemoListView.swift in Sources */,
-				B63C13F028C22C260035C1DE /* SearchViewController.swift in Sources */,
 				B65F77B328BF84E8006D41B7 /* BaseViewController.swift in Sources */,
 				B65F779928BF7430006D41B7 /* SceneDelegate.swift in Sources */,
 				B63C13E028C1138E0035C1DE /* RealmModel.swift in Sources */,
@@ -517,6 +513,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		B63C13F328C3A7720035C1DE /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		B65F77BE28BF8B6C006D41B7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -537,6 +541,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B63C13E628C21D030035C1DE /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		B63C13F428C3A7720035C1DE /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B63C13F328C3A7720035C1DE /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 		B65F77BF28BF8B6C006D41B7 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

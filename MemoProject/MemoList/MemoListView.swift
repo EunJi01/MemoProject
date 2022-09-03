@@ -15,7 +15,7 @@ class MemoListView: BaseView {
         view.register(MemoListTableViewCell.self, forCellReuseIdentifier: MemoListTableViewCell.reuseIdentifier)
         return view
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = ColorSet.shared.backgroundColor
