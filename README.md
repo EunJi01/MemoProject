@@ -17,14 +17,14 @@
 | **Iteration 3** | Realm |  |  |  | **~2022.09.02** |
 |  | Realm | Realm 스키마 구성 | 1h | 1h |  |
 |  | Realm | Realm 저장 구현 | 2h | 2h |  |
-|  | Realm | Realm 수정 구현 | ~~1h~~ | 4h... |  |
+|  | Realm | Realm 수정 구현 | ~~1h~~ | 5h 섹션 구분 관련 이슈 |  |
 |  | Realm | Realm 로드(정렬) 구현 | 1h | 1h |  |
-|  | Realm | Realm 삭제 구현 | ~~2h~~ | ... |  |
+|  | Realm | Realm 삭제 구현 | ~~2h~~ | 3h |  |
 |  |  |  |  |  |  |
 | **Iteration 4** | MomoListView 디테일 기능 |  |  |  | **~2022.09.03** |
-|  | MomoListView | 스와이프 삭제 구현 | 1h |  |  |
+|  | MomoListView | 스와이프 삭제 구현 | 1h | 1h |  |
 |  | MomoListView | tableView 헤더 구현 | 2h |  |  |
-|  | MomoListView | 메모 고정 기능 | 4h |  |  |
+|  | MomoListView | 메모 고정 기능 | ~~2h~~ | 3h 클로저 캡쳐 이슈 |  |
 |  | MomoListView | 검색결과 텍스트컬러 변경 | 2h |  |  |
 |  |  |  |  |  |  |
 | **Iteration 5** | WriteView 디테일 기능 |  |  |  | **~2022.09.04** |
