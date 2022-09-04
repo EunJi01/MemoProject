@@ -11,10 +11,10 @@ import RealmSwift
 protocol UserMemoRepositoryType {
     func fetchMemo() -> Results<UserMemo>!
     func fetchFixedMemo() -> Results<UserMemo>!
-    func updateItem(item: UserMemo, title: String, content: String) // 수정
+    func updateItem(item: UserMemo, title: String, content: String?) // 수정
     func updateFix(item: UserMemo) // 고정 등록/해제
     func deleteItem(item: UserMemo) // 삭제
-//    func fetchFilter(text: String) -> [UserMemo] // 검색
+    func fetchFilter(text: String) -> [UserMemo] // 검색
 }
 
 class UserMemoRepository: UserMemoRepositoryType {
@@ -28,8 +28,7 @@ class UserMemoRepository: UserMemoRepositoryType {
         return localRealm.objects(UserMemo.self).filter("isFix == true").sorted(byKeyPath: "regdate", ascending: false)
     }
     
-    func updateItem(item: UserMemo, title: String, content: String) {
-//        self.localRealm.create(UserMemo.self, value: ["objectID": item.objectID, "memoTitle": title, "memoContent": content, "regdate": Date()], update: .modified)
+    func updateItem(item: UserMemo, title: String, content: String?) {
         item.memoTitle = title
         item.memoContent = content
         item.regdate = Date()

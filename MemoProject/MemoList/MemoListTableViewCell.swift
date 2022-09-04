@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 final class MemoListTableViewCell: UITableViewCell {
-    let titleLabel: UILabel = {
+    var titleLabel: UILabel = {
         let view = UILabel()
         view.text = "제목"
         return view

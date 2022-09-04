@@ -16,7 +16,7 @@ class WriteView: BaseView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = ColorSet.shared.blackAndWhite
+        backgroundColor = ColorSet.shared.whiteAndBlack
     }
     
     required init?(coder: NSCoder) {

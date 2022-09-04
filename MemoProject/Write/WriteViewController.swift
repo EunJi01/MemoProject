@@ -23,7 +23,8 @@ final class WriteViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let task = task {
-            mainView.userTextView.text = task.memoTitle
+            mainView.userTextView.text = task.memoContent == nil ? task.memoTitle : task.memoTitle + task.memoContent!
+            memoTitle = task.memoTitle
         } else {
             mainView.userTextView.becomeFirstResponder() // 키보드 올리기
         }
@@ -45,27 +46,43 @@ final class WriteViewController: BaseViewController {
     }
     
     @objc private func backButtonTapped() {
-        saveButtonTapped()
-        navigationController?.popViewController(animated: true)
+        if (memoTitle?.trimmingCharacters(in: .whitespacesAndNewlines) == "") && (memoContent?.trimmingCharacters(in: .whitespacesAndNewlines) == "") {
+            if let task = task {
+                print("===내용 없음 / 메모 삭제===")
+                repository.deleteItem(item: task)
+            }
+            navigationController?.popViewController(animated: true)
+        } else {
+            saveButtonTapped()
+        }
     }
-    
-    @objc private func saveButtonTapped() { // MARK: 내용 없으면 삭제하기 구현 필요
-        guard let title = mainView.userTextView.text, title.trimmingCharacters(in: .whitespaces) != "" else { return }
-        
+
+    @objc private func saveButtonTapped() {
         do {
             try repository.localRealm.write {
                 if let task = task {
-                    repository.updateItem(item: task, title: title, content: memoContent ?? "")
+                    if self.memoTitle == task.memoTitle && self.memoContent == task.memoTitle {
+                        print("===변경사항 없음===") // MARK: 실행 안됨ㅜㅜ... 수정 안해도 날짜가 바뀜 아마 맨밑 버그때문인듯
+                        navigationController?.popViewController(animated: true)
+                    }  else {
+                        print("===기존 메모 수정 완료===")
+                        repository.updateItem(item: task, title: self.memoTitle ?? task.memoTitle, content: self.memoContent)
+                    }
                 } else {
-                    let newTask = UserMemo(memoTitle: title, memoContent: memoContent ?? "")
+                    guard let title = memoTitle, title.trimmingCharacters(in: .whitespaces) != "" else { return }
+                    let newTask = UserMemo(memoTitle: title, memoContent: memoContent)
                     repository.localRealm.add(newTask)
+                    print("===새로운 매모 저장 완료===")
                 }
             }
         } catch let error {
             print(error)
         }
         
-        mainView.userTextView.resignFirstResponder() // 키보드 내리기
+        print("Title: \(memoTitle ?? "없음")")
+        print("Content: \(memoContent ?? "없음")")
+    
+        navigationController?.popViewController(animated: true)
     }
     
     @objc private func shareButtonTapped() {
@@ -76,11 +93,17 @@ final class WriteViewController: BaseViewController {
     }
 }
 
-extension WriteViewController: UITextViewDelegate { // MARK: 줄바꿈으로 타이틀/내용 구분 구현 필요
-//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-//        if text == "\n" {
-//            print("주울바꿈")
-//        }
-//        return true
-//    }
+// MARK: 버그 - 마지막 글자 하나가 저장이 안되는 현상 + 줄바꿈이 불필요하게 하나씩 더 들어가는 현상
+extension WriteViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let cuttingLine = mainView.userTextView.text.components(separatedBy: "\n") // 줄바꿈 기준으로 문자열 자르기
+        memoTitle = cuttingLine[0] + "\n" // 0번째 인덱스를 제목으로 저장
+        //print("Title: " + memoTitle!)
+        
+        let content = cuttingLine[1...].reduce("") { str, i in str + i + "\n"} // 배열 형태인 String 합치기
+        memoContent = content
+        //print("Content: " + content)
+        
+        return true
+    }
 }
