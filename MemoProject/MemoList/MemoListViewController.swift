@@ -270,7 +270,7 @@ extension MemoListViewController: UITableViewDelegate, UITableViewDataSource {
             guard let str = str else { return }
             
             let attributeStr = NSMutableAttributedString(string: str)
-            attributeStr.addAttribute(.foregroundColor, value: ColorSet.shared.buttonColor, range: (str as NSString).range(of: searchText))
+            attributeStr.addAttribute(.foregroundColor, value: ColorSet.shared.buttonColor, range: (str.lowercased() as NSString).range(of: searchText.lowercased()))
             
             if searchResults[indexPath.row].memoTitle.contains(str) {
                 cell.titleLabel.attributedText = attributeStr
