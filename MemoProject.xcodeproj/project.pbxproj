@@ -15,7 +15,6 @@
 		B63C13F528C3A7720035C1DE /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = B63C13F428C3A7720035C1DE /* Toast */; };
 		B65F779728BF7430006D41B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F779628BF7430006D41B7 /* AppDelegate.swift */; };
 		B65F779928BF7430006D41B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F779828BF7430006D41B7 /* SceneDelegate.swift */; };
-		B65F779B28BF7430006D41B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F779A28BF7430006D41B7 /* ViewController.swift */; };
 		B65F779E28BF7430006D41B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65F779C28BF7430006D41B7 /* Main.storyboard */; };
 		B65F77A028BF7431006D41B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65F779F28BF7431006D41B7 /* Assets.xcassets */; };
 		B65F77A328BF7431006D41B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65F77A128BF7431006D41B7 /* LaunchScreen.storyboard */; };
@@ -32,6 +31,7 @@
 		B65F77CD28BFC71C006D41B7 /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F77CC28BFC71C006D41B7 /* MemoListTableViewCell.swift */; };
 		B65F77D328BFEE20006D41B7 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F77D228BFEE20006D41B7 /* WriteView.swift */; };
 		B65F77D528BFEE29006D41B7 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F77D428BFEE29006D41B7 /* WriteViewController.swift */; };
+		B6C93E4E28FEE03E00F2F96F /* ListConfigutationCoellectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C93E4D28FEE03E00F2F96F /* ListConfigutationCoellectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,6 @@
 		B65F779328BF7430006D41B7 /* MemoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65F779628BF7430006D41B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B65F779828BF7430006D41B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B65F779A28BF7430006D41B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B65F779D28BF7430006D41B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B65F779F28BF7431006D41B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B65F77A228BF7431006D41B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		B65F77CC28BFC71C006D41B7 /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
 		B65F77D228BFEE20006D41B7 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		B65F77D428BFEE29006D41B7 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		B6C93E4D28FEE03E00F2F96F /* ListConfigutationCoellectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListConfigutationCoellectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +103,7 @@
 		B65F779528BF7430006D41B7 /* MemoProject */ = {
 			isa = PBXGroup;
 			children = (
+				B6C93E4C28FEDF6C00F2F96F /* ListConfiguration */,
 				B65F77B828BF8781006D41B7 /* Protocol */,
 				B65F77B528BF85B3006D41B7 /* Extension */,
 				B65F77CB28BFBB96006D41B7 /* Utility */,
@@ -112,7 +113,6 @@
 				B65F77D128BFEDFF006D41B7 /* Write */,
 				B65F779628BF7430006D41B7 /* AppDelegate.swift */,
 				B65F779828BF7430006D41B7 /* SceneDelegate.swift */,
-				B65F779A28BF7430006D41B7 /* ViewController.swift */,
 				B65F779C28BF7430006D41B7 /* Main.storyboard */,
 				B65F779F28BF7431006D41B7 /* Assets.xcassets */,
 				B65F77A128BF7431006D41B7 /* LaunchScreen.storyboard */,
@@ -182,6 +182,14 @@
 				B65F77D428BFEE29006D41B7 /* WriteViewController.swift */,
 			);
 			path = Write;
+			sourceTree = "<group>";
+		};
+		B6C93E4C28FEDF6C00F2F96F /* ListConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				B6C93E4D28FEE03E00F2F96F /* ListConfigutationCoellectionViewController.swift */,
+			);
+			path = ListConfiguration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +276,6 @@
 			files = (
 				B65F77B728BF85C6006D41B7 /* UIViewController+Extension.swift in Sources */,
 				B65F77BA28BF87C9006D41B7 /* ReusableIdentifier.swift in Sources */,
-				B65F779B28BF7430006D41B7 /* ViewController.swift in Sources */,
 				B65F77D528BFEE29006D41B7 /* WriteViewController.swift in Sources */,
 				B65F77C228BF9796006D41B7 /* ColorSet.swift in Sources */,
 				B65F77AE28BF845B006D41B7 /* MemoListViewController.swift in Sources */,
@@ -284,6 +291,7 @@
 				B63C13E028C1138E0035C1DE /* RealmModel.swift in Sources */,
 				B65F77C828BFAB06006D41B7 /* FirstPopupView.swift in Sources */,
 				B65F77CD28BFC71C006D41B7 /* MemoListTableViewCell.swift in Sources */,
+				B6C93E4E28FEE03E00F2F96F /* ListConfigutationCoellectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,12 +441,13 @@
 				DEVELOPMENT_TEAM = 2RFRSG9M26;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemoProject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "황은지";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,12 +471,13 @@
 				DEVELOPMENT_TEAM = 2RFRSG9M26;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemoProject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "황은지";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
