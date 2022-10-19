@@ -32,6 +32,7 @@
 		B65F77D328BFEE20006D41B7 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F77D228BFEE20006D41B7 /* WriteView.swift */; };
 		B65F77D528BFEE29006D41B7 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F77D428BFEE29006D41B7 /* WriteViewController.swift */; };
 		B6C93E4E28FEE03E00F2F96F /* ListConfigutationCoellectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C93E4D28FEE03E00F2F96F /* ListConfigutationCoellectionViewController.swift */; };
+		B6C93E522900490300F2F96F /* FolderListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C93E512900490300F2F96F /* FolderListCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		B65F77D228BFEE20006D41B7 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		B65F77D428BFEE29006D41B7 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		B6C93E4D28FEE03E00F2F96F /* ListConfigutationCoellectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListConfigutationCoellectionViewController.swift; sourceTree = "<group>"; };
+		B6C93E512900490300F2F96F /* FolderListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderListCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,8 @@
 		B65F779528BF7430006D41B7 /* MemoProject */ = {
 			isa = PBXGroup;
 			children = (
+				B65F779628BF7430006D41B7 /* AppDelegate.swift */,
+				B65F779828BF7430006D41B7 /* SceneDelegate.swift */,
 				B6C93E4C28FEDF6C00F2F96F /* ListConfiguration */,
 				B65F77B828BF8781006D41B7 /* Protocol */,
 				B65F77B528BF85B3006D41B7 /* Extension */,
@@ -111,8 +115,6 @@
 				B65F77C928BFAB61006D41B7 /* FirstPopup */,
 				B65F77AF28BF8463006D41B7 /* MemoList */,
 				B65F77D128BFEDFF006D41B7 /* Write */,
-				B65F779628BF7430006D41B7 /* AppDelegate.swift */,
-				B65F779828BF7430006D41B7 /* SceneDelegate.swift */,
 				B65F779C28BF7430006D41B7 /* Main.storyboard */,
 				B65F779F28BF7431006D41B7 /* Assets.xcassets */,
 				B65F77A128BF7431006D41B7 /* LaunchScreen.storyboard */,
@@ -187,6 +189,7 @@
 		B6C93E4C28FEDF6C00F2F96F /* ListConfiguration */ = {
 			isa = PBXGroup;
 			children = (
+				B6C93E512900490300F2F96F /* FolderListCollectionViewController.swift */,
 				B6C93E4D28FEE03E00F2F96F /* ListConfigutationCoellectionViewController.swift */,
 			);
 			path = ListConfiguration;
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B65F77B728BF85C6006D41B7 /* UIViewController+Extension.swift in Sources */,
+				B6C93E522900490300F2F96F /* FolderListCollectionViewController.swift in Sources */,
 				B65F77BA28BF87C9006D41B7 /* ReusableIdentifier.swift in Sources */,
 				B65F77D528BFEE29006D41B7 /* WriteViewController.swift in Sources */,
 				B65F77C228BF9796006D41B7 /* ColorSet.swift in Sources */,

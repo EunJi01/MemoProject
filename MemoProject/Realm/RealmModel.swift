@@ -8,6 +8,17 @@
 import Foundation
 import RealmSwift
 
+class Folder: Object {
+    @Persisted var folderTitle: String
+    @Persisted var memo: List<UserMemo>
+    @Persisted(primaryKey: true) var objectID: ObjectId
+    
+    convenience init(title: String) {
+        self.init()
+        self.folderTitle = title
+    }
+}
+
 class UserMemo: Object {
     @Persisted var memoTitle: String
     @Persisted var memoContent: String?
