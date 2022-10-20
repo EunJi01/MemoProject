@@ -10,43 +10,52 @@ import RealmSwift
 
 final class ListConfigutationCoellectionViewController: UIViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    lazy var collectionView = UICollectionView.init(frame: .zero, collectionViewLayout: createLayout())
+    let searchBar = UISearchBar()
     
     let localRealm = try! Realm()
     let repository = UserMemoRepository()
-    var tasks: Results<UserMemo>!
+    var tasks: List<UserMemo>!
     private var dataSource: UICollectionViewDiffableDataSource<Int, UserMemo>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tasks = localRealm.objects(UserMemo.self)
-        collectionView.delegate = self
-        searchBar.delegate = self
-
-        collectionView.collectionViewLayout = createLayout()
+        setConfigure()
         configureDataSource()
         
         print("Realm is located at:", repository.localRealm.configuration.fileURL!)
+    }
+    
+    func setConfigure() {
+        view.backgroundColor = .white
+        searchBar.delegate = self
+        
+        view.addSubview(collectionView)
+        view.addSubview(searchBar)
+        
+        searchBar.snp.makeConstraints { make in
+            make.top.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(44)
+        }
+        
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(searchBar.snp.bottom)
+            make.bottom.horizontalEdges.equalToSuperview()
+        }
     }
 }
 
 extension ListConfigutationCoellectionViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text else { return }
+        guard let task = localRealm.objects(Folder.self).filter("folderTitle = '2번 폴더'").first else { return }
+        let memo = UserMemo(memoTitle: text, memoContent: nil)
         
         try! localRealm.write {
-            let newTask = UserMemo(memoTitle: text, memoContent: nil)
-            repository.localRealm.add(newTask)
+            task.memo.append(memo)
             snapshotApply()
         }
-    }
-}
-
-extension ListConfigutationCoellectionViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("선택")
     }
 }
 
@@ -58,8 +67,12 @@ extension ListConfigutationCoellectionViewController {
         configuration.trailingSwipeActionsConfigurationProvider = { indexPath in
             let del = UIContextualAction(style: .destructive, title: "Delete") {
                 [weak self] action, view, completion in
-                self?.repository.deleteItem(item: (self?.tasks[indexPath.row])!)
-                // MARK: 인덱스 에러 발생
+                
+                try! self?.localRealm.write {
+                    self?.tasks.remove(at: indexPath.row)
+                }
+                
+                // MARK: 갱신이 제대로 안되는 버그 있음ㅜ
                 self?.snapshotApply()
                 completion(true)
             }

@@ -9,7 +9,6 @@ import UIKit
 import RealmSwift
 
 class FolderListCollectionViewController: UICollectionViewController {
-    // MARK: 화면 전환 쪽 버그 있음!!!!!!! 현재 안쓰는 상태
 
     let localRealm = try! Realm()
     var tasks: Results<Folder>!
@@ -18,23 +17,23 @@ class FolderListCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tasks = localRealm.objects(Folder.self)
+        
+        configureDataSource()
+        collectionView.delegate = self
+        collectionView.collectionViewLayout = createLayout()
+        
         view.backgroundColor = .white
         navigationController?.title = "폴더 리스트"
         print("Realm is located at:", UserMemoRepository().localRealm.configuration.fileURL!)
-        
-        tasks = localRealm.objects(Folder.self)
-        collectionView.delegate = self
-        
-        collectionView.collectionViewLayout = createLayout()
-        configureDataSource()
     }
 }
 
 extension FolderListCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = ListConfigutationCoellectionViewController()
-        vc.tasks = localRealm.objects(UserMemo.self)
-        present(vc, animated: true)
+        vc.tasks = tasks[indexPath.row].memo
+        transition(vc, transitionStyle: .push)
     }
 }
 
